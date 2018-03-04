@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Magegeeks
+ * @package    Magegeeks_TwilioSMSOTP
+ * @author     Magegeeks
+ * @copyright  Copyright (c) 2014-2017 Magegeeks (https://www.magegeeks.in/)
+ * @license    https://www.magegeeks.in/license.html
+ * @contact    magegeeks@gmail.com
+ */ 
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magegeeks" translate="label" sortOrder="1">
+            <label>Magegeeks</label>
+        </tab>
+        <section id="magegeeks" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Twilio OTP</label>
+            <tab>magegeeks</tab>
+            <resource>Magegeeks_TwilioSMSOTP::config_twiliosmsotp</resource>
+            <group id="twilioconfiguration" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Twilio General Configuration</label>
+                <field id="enabled" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled OTP</label>
+                    <source_model>Magegeeks\TwilioSMSOTP\Model\Config\Source\Status</source_model>
+                </field>
+                <field id="twilioapikey" translate="label comment" sortOrder="5" type="password" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twilio API Key</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <comment>Enter API key for Twilio</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

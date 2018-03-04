@@ -1,0 +1,27 @@
+.otp_section {
+	position : relative;
+	padding-right : 110px;
+	padding-left : 129px;
+}
+.otp_section .action.submit, .otp_verification .action.submit {
+	position : absolute;
+	right : 0px;
+	top : 0px;
+}
+.otp_verification {
+	position : relative;
+	padding : 0px 120px 0px 110px;
+	margin-top : 15px;
+}
+.otp_verification > label {
+    left : 0;
+    position : absolute;
+    top : 7px; 
+    font-weight : 600;
+}
+.otp_section select {
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 130px;
+}
